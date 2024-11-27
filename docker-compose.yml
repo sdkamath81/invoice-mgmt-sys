@@ -1,0 +1,24 @@
+services:
+  app:
+    image: openjdk:17-jdk-slim
+    ports:
+      - 8080:8080
+    working_dir: /invoicesys
+    volumes:
+      - ./:/invoicesys
+    environment:
+      MYSQL_HOST: mysql
+      MYSQL_USER: root
+      MYSQL_PASSWORD: P@ssword123
+      MYSQL_DB: invoicesdb
+  mysql:
+    image: mysql:8.0
+    ports:
+      - 3306:3306
+    volumes:
+      - gfg-mysql-data:/var/lib/mysql
+    environment:
+      MYSQL_ROOT_PASSWORD: P@ssword123
+      MYSQL_DATABASE: invoicesdb
+volumes:
+ gfg-mysql-data:
