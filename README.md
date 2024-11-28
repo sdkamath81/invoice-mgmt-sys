@@ -5,8 +5,11 @@ Main objective of this project is managing Invoices. Developed all types of CRUD
 Technologies used: Java, Springboot, REST, Hibernate, JPA and MySQL.
 
 How to access:
+
 Base URL: http://localhost:8080
+
 APIs:
+
 1. Create Invoice
     URL: /invoices/create
     Method:Post
